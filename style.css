@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.container{
+    background-color: #ffffe0;
+    min-height: 100vh;
+    border: 10px solid rgb(252, 222, 160);
+}
+.content{
+    max-width: 1090px;
+    margin: 0 auto;
+}
+.top_section{
+    margin-top: 40px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.top_section h1{
+    font-size: 40px;
+    font-weight: 900;
+    color: black;
+    font-family: 'Archivo Black', sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 20px 16px 0px 40px;
+}
+@media (max-width:1100px) {
+    .top_section h1{
+        font-size: 30px;
+    }
+}
+@media (max-width:800px) {
+    .top_section h1{
+        font-size: 20px;
+    }
+}
+.top_section h4{
+    font-size: 20px;
+    font-family: 'Archivo Black', sans-serif;
+    text-align: end;
+    margin: 0px 25px 0px 0px;
+}
+@media (max-width:1100px) {
+    .top_section h4{
+        font-size: 15px;
+    }
+}
+@media (max-width:800px) {
+    .top_section h4{
+        font-size: 12px;
+    }
+}
+.img-fluid{
+    width:425px;
+    height: auto;
+}
+@media screen and (max-width: 1100px){
+    .image{
+        padding: 0px 20px;
+    }
+    .image img{
+        width: 310px;
+        height: auto;
+    }
+}
+@media screen and (max-width: 800px){
+    .image{
+        padding: 0px 20px;
+    }
+    .image img{
+        width: 260px;
+        height: auto;
+    }
+}
+@media screen and (max-width: 500px){
+    .image{
+        padding: 0px 20px;
+    }
+    .image img{
+        width: 200px;
+        height: auto;
+    }
+}
+.image{
+    filter: drop-shadow(5px 5px 10px #555);
+}
+.about{
+    margin-top: 10px;
+}
+.about h2{
+    font-size: 58px;
+    font-weight: 900;
+    font-family: 'Black Ops One', system-ui;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+@media (max-width:1100px) {
+    .about h2{
+        font-size: 40px;
+    }
+}
+@media (max-width:800px) {
+    .about h2{
+        font-size: 30px;
+    }
+}
+@media (max-width:500px) {
+    .about h2{
+        font-size: 25px;
+    }
+}
+.about p{
+    font-size: 19px;
+    line-height: 27px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    letter-spacing: 0.2px;
+    padding: 10px;
+}
+.head{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 20px;
+    font-family: 'Black Ops One', system-ui;
+}
+.accordion{
+    margin: 21px -13px;
+    max-width: 1090px;
+}
+.accordion li{
+    list-style: none;
+    width: auto;
+    margin: 20px;
+    padding: 10px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    border-radius: 8px;
+    background: rgb(245, 245, 187);
+    color: black;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+label::before{
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion .content1{
+    color: #555;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content1{
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+.accordion input[type="radio"]:checked + label::before{
+    content: '-';
+}
